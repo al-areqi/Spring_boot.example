@@ -22,7 +22,7 @@ public class RobotController {
 	@GetMapping("/robot")
 	public Robot getPlaces() throws Exception {
 
-		if (!robot.isPresent())
+		if (robot.getFace_dirction()==null)
 			throw new RobotMissingException("Robot is Missing");
 		return robot;
 	}
@@ -31,18 +31,14 @@ public class RobotController {
 	@PostMapping("/robot")
 	public Robot placeRobot(@Valid @RequestBody Robot robotResource) throws Exception {
 		robot = robotResource;
-		//ControllerLinkBuilder selfLink = linkTo(methodOn(this.getClass()).placeRobot(robot));
-		//ControllerLinkBuilder linkToMove = linkTo(methodOn(this.getClass()).move());
-		//robot.add(selfLink.withSelfRel());
-		//robot.add(linkToMove.withRel("Move Robot"));
 		return robot;
 	}
 
 	// Turn the robot to the right
 	@PutMapping("/robot/right")
 	public Robot turnRight() throws Exception {
-		if (!robot.isPresent())
-			throw new Exception("Robot is Missing");
+		if (robot.getFace_dirction()==null)
+			throw new RobotMissingException("Robot is Missing");
 		robot.turnRight();
 		return robot;
 	}
@@ -50,8 +46,8 @@ public class RobotController {
 	// Turn the robot to the left
 	@PutMapping("/robot/left")
 	public Robot turnLeft() throws Exception {
-		if (!robot.isPresent())
-			throw new Exception("Robot is Missing");
+		if (robot.getFace_dirction()==null)
+			throw new RobotMissingException("Robot is Missing");
 		robot.turnLeft();
 		return robot;
 	}
@@ -59,8 +55,8 @@ public class RobotController {
 	// Move the robot one step forward
 	@PutMapping("/robot/move")
 	public Robot move() throws Exception {
-		if (!robot.isPresent())
-			throw new Exception("Robot is Missing");
+		if (robot.getFace_dirction()==null)
+			throw new RobotMissingException("Robot is Missing");
 		robot.move();
 		return robot;
 	}

@@ -3,7 +3,7 @@ package com.puzzle.robot.model;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Robot  {
+public class Robot {
 	public enum Directions {
 		EAST, WEST, NORTH, SOUTH
 	}
@@ -101,14 +101,6 @@ public class Robot  {
 			break;
 		}
 
-	}
-
-	public boolean isPresent() {
-		// TODO Auto-generated method stub
-		if (this.face_dirction == null)
-			return false;
-		else
-			return true;
 	}
 
 }
