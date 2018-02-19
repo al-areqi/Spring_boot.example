@@ -1,0 +1,139 @@
+{
+	"info": {
+		"name": "Robot Puzzle",
+		"_postman_id": "8d8f7680-5d62-f8ed-57e2-eb84e5a07206",
+		"description": "This is a simple puzzle of moving a robot on the table of 5 x 5 dimensions.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Place the Robot on the table",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json;charset=UTF-8"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"x_coordinates\": 0, \"y_coordinates\": 0, \"face_dirction\": \"North\"} "
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/robot/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"robot",
+						""
+					]
+				},
+				"description": "Enabling users to place the Robot on the table by defining coordinates and face direction"
+			},
+			"response": []
+		},
+		{
+			"name": "Report the Robot",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/robot/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"robot",
+						""
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Move Robot",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/api/robot/move",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"robot",
+						"move"
+					]
+				},
+				"description": "Move the robot one step"
+			},
+			"response": []
+		},
+		{
+			"name": "Turn right",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/api/robot/right",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"robot",
+						"right"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Turn-Left",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/robot/left",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"robot",
+						"left"
+					]
+				},
+				"description": "Turn the Robot to the left diraction"
+			},
+			"response": []
+		}
+	]
+}
