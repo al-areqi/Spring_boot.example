@@ -1,4 +1,4 @@
-# Spring_boot.example
+# Simple Robot Puzzle based on Spring Boot API
 This is A sample puzzle application to move a robot on a table of size 5x5. Based on Spring Boot and RestApi technologies, the application is developed to show how several requests can be passed to the Robot, such as:
 - Place location (coordinates) and face direction of the Robot, (Post request)
 - Report the location and face direction of the Robot (Get request)
