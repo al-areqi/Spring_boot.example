@@ -12,8 +12,9 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 	// other exception handlers
 
 	@ExceptionHandler(RobotMissingException.class)
+
 	protected ResponseEntity<String> handleEntityNotFound(RobotMissingException ex) {
-		
+
 		return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_ACCEPTABLE);
 	}
 }

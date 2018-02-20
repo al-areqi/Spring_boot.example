@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Robot {
 	public enum Directions {
-		EAST, WEST, NORTH, SOUTH
+		East, West, North, South
 	}
 
 	final static int Dimensions = 5;
@@ -43,22 +43,22 @@ public class Robot {
 
 	public void move() {
 		switch (face_dirction) {
-		case EAST:
+		case East:
 			if (this.x_coordinates != Dimensions - 1)
 				this.x_coordinates++;
 			break;
 
-		case WEST:
+		case West:
 			if (this.x_coordinates != 0)
 				this.x_coordinates--;
 			break;
 
-		case NORTH:
+		case North:
 			if (this.y_coordinates != Dimensions - 1)
 				this.y_coordinates++;
 			break;
 
-		case SOUTH:
+		case South:
 			if (this.y_coordinates != 0)
 				this.y_coordinates--;
 			break;
@@ -69,17 +69,17 @@ public class Robot {
 	public void turnLeft() {
 
 		switch (face_dirction) {
-		case EAST:
-			this.face_dirction = Directions.NORTH;
+		case East:
+			this.face_dirction = Directions.North;
 			break;
-		case WEST:
-			this.face_dirction = Directions.SOUTH;
+		case West:
+			this.face_dirction = Directions.South;
 			break;
-		case NORTH:
-			this.face_dirction = Directions.WEST;
+		case North:
+			this.face_dirction = Directions.West;
 			break;
-		case SOUTH:
-			this.face_dirction = Directions.EAST;
+		case South:
+			this.face_dirction = Directions.East;
 			break;
 		}
 
@@ -87,17 +87,17 @@ public class Robot {
 
 	public void turnRight() {
 		switch (face_dirction) {
-		case EAST:
-			this.face_dirction = Directions.SOUTH;
+		case East:
+			this.face_dirction = Directions.South;
 			break;
-		case WEST:
-			this.face_dirction = Directions.NORTH;
+		case West:
+			this.face_dirction = Directions.North;
 			break;
-		case NORTH:
-			this.face_dirction = Directions.EAST;
+		case North:
+			this.face_dirction = Directions.East;
 			break;
-		case SOUTH:
-			this.face_dirction = Directions.WEST;
+		case South:
+			this.face_dirction = Directions.West;
 			break;
 		}
 
