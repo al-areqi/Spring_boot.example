@@ -5,7 +5,7 @@ This is A simple puzzle application to move a robot on a table of size 5x5. Base
 - Move the Robot one step forward (Put request)
 - Turn the Robot to the right direction (Put request)
 - Turn the Robot to the left direction (Put request)
-# The application has constraints of preventing Robot from falling
-# The assumtion of this appliaction is to place only one robot at time on the table. 
+-- The application has constraints of preventing Robot from falling
+-- The assumtion of this appliaction is to place only one robot at time on the table. 
 
-# In this application you can see also how the exceptions is handling by through Spring and RestApi and how Enum is useful to define durations as constant values.
+-- In this application you can see also how the exceptions is handling by through Spring and RestApi and how Enum is useful to define durations as constant values.
